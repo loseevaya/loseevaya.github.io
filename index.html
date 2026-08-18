@@ -1,45 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>你的名字 | 个人主页</title>
-  <meta name="description" content="你的名字的个人学术主页">
+  <title data-zh="傅腾 | 个人主页" data-en="Teng Fu | Homepage">傅腾 | 个人主页</title>
+  <meta name="description" content="傅腾的个人学术主页" data-zh="傅腾的个人学术主页" data-en="Academic homepage of Teng Fu">
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Teng Fu",
+    "alternateName": "傅腾",
+    "url": "https://loseevaya.github.io",
+    "email": "mailto:futeng0406@gmail.com",
+    "image": "https://loseevaya.github.io/photos/photo.JPG",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Fudan University" },
+      { "@type": "CollegeOrUniversity", "name": "Shandong University" }
+    ],
+    "knowsAbout": [
+      "Computer Vision",
+      "Object Tracking",
+      "Person Re-identification",
+      "Anomaly Detection",
+      "LLM/VLM Post-training",
+      "Agents"
+    ],
+    "sameAs": [
+      "https://github.com/loseevaya",
+      "https://scholar.google.com/citations?user=pmM1n58AAAAJ&hl=zh-CN"
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="wrapper">
 
     <!-- ===================== 左侧个人信息栏 ===================== -->
     <aside class="sidebar">
-      <div class="avatar">
-        <img src="assets/avatar.svg" alt="头像">
+      <div class="lang-switch" role="group" aria-label="语言切换 / Language">
+        <button id="lang-zh" class="lang-btn" type="button">中</button>
+        <button id="lang-en" class="lang-btn active" type="button">EN</button>
       </div>
-      <h1 class="name">你的名字</h1>
-      <p class="subtitle">Your Name</p>
-      <p class="affiliation">某某大学 · 计算机学院</p>
-      <p class="email">you@example.edu</p>
+
+      <div class="avatar">
+        <img src="photos/photo.JPG" alt="傅腾的照片">
+      </div>
+      <h1 class="name" data-zh="傅腾" data-en="Teng Fu">傅腾</h1>
+      <p class="subtitle" data-zh="Teng Fu" data-en="Teng Fu">Teng Fu</p>
+      <p class="affiliation" data-zh="复旦大学 · 计算机科学技术学院 · 博士（2026.06）" data-en="School of Computer Science, Fudan University · Ph.D. (Jun. 2026)">复旦大学 · 计算机科学技术学院 · 博士（2026.06）</p>
+      <p class="email"><a href="mailto:futeng0406@gmail.com">futeng0406@gmail.com</a></p>
 
       <div class="social-links">
-        <a href="https://github.com/loseevaya" target="_blank" title="GitHub">GitHub</a>
-        <a href="https://scholar.google.com/" target="_blank" title="Google Scholar">Scholar</a>
-        <a href="mailto:you@example.edu" title="Email">Email</a>
+        <a class="social-btn" href="https://github.com/loseevaya" target="_blank" title="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a class="social-btn" href="https://scholar.google.com/citations?user=pmM1n58AAAAJ&hl=zh-CN" target="_blank" title="Google Scholar">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M5.24 13.34c.28.28.67.42 1.16.42h2.53v3.11c0 .37.15.7.42.97.28.28.67.42 1.16.42h2.98c.49 0 .88-.14 1.16-.42.28-.27.42-.6.42-.97v-3.11h2.53c.49 0 .88-.14 1.16-.42.28-.28.42-.67.42-1.16v-2.38c0-.49-.14-.88-.42-1.16-.28-.28-.67-.42-1.16-.42h-2.53V4.53c0-.49-.14-.88-.42-1.16-.28-.28-.67-.42-1.16-.42h-2.98c-.49 0-.88.14-1.16.42-.27.28-.42.67-.42 1.16v3.11H6.4c-.49 0-.88.14-1.16.42-.28.28-.42.67-.42 1.16v2.38c0 .49.14.88.42 1.16zM22 4.5v15c0 1.38-1.12 2.5-2.5 2.5h-15C3.12 22 2 20.88 2 19.5v-15C2 3.12 3.12 2 4.5 2h15C20.88 2 22 3.12 22 4.5z"/></svg>
+          <span data-zh="谷歌学术" data-en="Scholar">谷歌学术</span>
+        </a>
+        <a class="social-btn" href="mailto:futeng0406@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.5-8 5-8-5V6l8 5 8-5v2.5z"/></svg>
+          <span data-zh="邮箱" data-en="Email">邮箱</span>
+        </a>
       </div>
 
       <nav class="nav">
         <ul>
-          <li><a href="#about" class="active">关于</a></li>
-          <li><a href="#research">研究方向</a></li>
-          <li><a href="#news">新闻</a></li>
-          <li><a href="#publications">发表论文</a></li>
-          <li><a href="#education">教育经历</a></li>
-          <li><a href="#experience">工作经历</a></li>
-          <li><a href="#honors">获奖荣誉</a></li>
+          <li><a href="#about" class="active" data-zh="关于" data-en="About">关于</a></li>
+          <li><a href="#research" data-zh="研究方向" data-en="Research">研究方向</a></li>
+          <li><a href="#news" data-zh="新闻" data-en="News">新闻</a></li>
+          <li><a href="#publications" data-zh="发表论文" data-en="Publications">发表论文</a></li>
+          <li><a href="#education" data-zh="教育经历" data-en="Education">教育经历</a></li>
+          <li><a href="#experience" data-zh="工作经历" data-en="Experience">工作经历</a></li>
+          <li><a href="#services" data-zh="学术服务" data-en="Services">学术服务</a></li>
+          <li><a href="#honors" data-zh="获奖荣誉" data-en="Honors">获奖荣誉</a></li>
         </ul>
       </nav>
 
       <footer class="sidebar-footer">
-        <p>© 2025 你的名字</p>
+        <p>© 2026 <span data-zh="傅腾" data-en="Teng Fu">傅腾</span></p>
       </footer>
     </aside>
 
@@ -48,59 +91,175 @@
 
       <!-- 关于 -->
       <section id="about" class="section">
-        <h2>关于我</h2>
-        <p>你好！我是 <strong>你的名字</strong>，目前是 <strong>某某大学</strong> 的一名硕士研究生/博士研究生，导师是 XXX 教授。</p>
-        <p>我的研究方向是 <strong>计算机视觉、机器学习</strong> 等。请在这里用一小段话介绍你自己，例如你的研究兴趣、长期目标等。</p>
-        <p>更多信息请查看我的 <a href="assets/CV.txt" target="_blank">个人简历（CV）</a>。</p>
+        <h2 class="section-title" data-zh="👋 关于我" data-en="👋 About Me">👋 关于我</h2>
+        <p data-zh='你好！我是 <strong>傅腾</strong>，2000 年 4 月出生于中国山东，现居上海。我于 2026 年 6 月在 <strong>复旦大学</strong> 获得计算机科学博士学位，师从 <strong>Xiangyang Xue 教授</strong> 和 <strong>Bin Li 教授</strong>。本科就读于山东大学人工智能专业。' data-en='Hi! I am <strong>Teng Fu</strong>, born in April 2000 in Shandong, China, currently living in Shanghai. I received my Ph.D. in Computer Science from <strong>Fudan University</strong> in June 2026, advised by <strong>Prof. Xiangyang Xue</strong> and <strong>Prof. Bin Li</strong>. I obtained my B.S. in Artificial Intelligence from Shandong University.'>你好！我是 <strong>傅腾</strong>，2000 年 4 月出生于中国山东，现居上海。我于 2026 年 6 月在 <strong>复旦大学</strong> 获得计算机科学博士学位，师从 <strong>Xiangyang Xue 教授</strong> 和 <strong>Bin Li 教授</strong>。本科就读于山东大学人工智能专业。</p>
+        <p data-zh='我的研究经历大致分为三个阶段：<strong>2024 年之前</strong>主要从事经典计算机视觉研究（目标跟踪、行人重识别、异常检测等）；<strong>2024-2025 年</strong>转向 LLM/VLM 的后训练；<strong>2026 年起</strong>研究兴趣转向智能体（Agent）相关方向。' data-en='My research experience has three phases: <strong>before 2024</strong>, I worked on classic computer vision (object tracking, person re-identification, anomaly detection, etc.); <strong>in 2024-2025</strong>, I focused on post-training of LLMs/VLMs; <strong>since 2026</strong>, my research has shifted to agents.'>我的研究经历大致分为三个阶段：<strong>2024 年之前</strong>主要从事经典计算机视觉研究（目标跟踪、行人重识别、异常检测等）；<strong>2024-2025 年</strong>转向 LLM/VLM 的后训练；<strong>2026 年起</strong>研究兴趣转向智能体（Agent）相关方向。</p>
+        
       </section>
 
       <!-- 研究方向 -->
       <section id="research" class="section">
-        <h2>研究方向</h2>
-        <ul>
-          <li><strong>计算机视觉：</strong>图像分割、目标检测、场景理解等。</li>
-          <li><strong>机器学习：</strong>自监督学习、多模态学习等。</li>
-          <li><strong>具身智能：</strong>机器人视觉、导航等。</li>
-        </ul>
+        <h2 class="section-title" data-zh="🔍 研究方向" data-en="🔍 Research">🔍 研究方向</h2>
+        <div class="research-grid">
+          <div class="research-card">
+            <div class="research-icon">📷</div>
+            <h3 data-zh="经典计算机视觉" data-en="Classic Computer Vision">经典计算机视觉</h3>
+            <p data-zh="目标跟踪、行人重识别（ReID）、异常检测等。" data-en="Object tracking, person re-identification (ReID), anomaly detection, etc.">目标跟踪、行人重识别（ReID）、异常检测等。</p>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">🧠</div>
+            <h3 data-zh="LLM/VLM 后训练" data-en="LLM/VLM Post-training">LLM/VLM 后训练</h3>
+            <p data-zh="大语言模型 / 视觉语言模型的后训练。" data-en="Post-training of large language models and vision-language models.">大语言模型 / 视觉语言模型的后训练。</p>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">🤖</div>
+            <h3 data-zh="智能体" data-en="Agents">智能体</h3>
+            <p data-zh="智能体推理、决策与多模态智能体。" data-en="Agent reasoning, decision-making, and multimodal agents.">智能体推理、决策与多模态智能体。</p>
+          </div>
+        </div>
       </section>
 
       <!-- 新闻 -->
       <section id="news" class="section">
-        <h2>新闻</h2>
+        <h2 class="section-title" data-zh="📰 新闻" data-en="📰 News">📰 新闻</h2>
         <ul class="news-list">
-          <li><span class="date">2025-01</span> 一条新闻：例如论文被某会议接收。</li>
-          <li><span class="date">2024-09</span> 一条新闻：例如入学/获奖/项目开源。</li>
-          <li><span class="date">2024-06</span> 一条新闻：例如开始某项研究。</li>
+          <li>
+            <span class="date">2026.07</span>
+            <span data-zh="一篇论文被 ECCV 接收，感谢并祝贺所有合作者！🎉" data-en="One paper accepted by ECCV. Thanks and congratulations to all coauthors! 🎉">一篇论文被 ECCV 接收，感谢并祝贺所有合作者！🎉</span>
+          </li>
+          <li>
+            <span class="date">2026.06</span>
+            <span data-zh="博士毕业 🎓" data-en="Graduated with a Ph.D. 🎓">博士毕业 🎓</span>
+          </li>
+          <li>
+            <span class="date">2025.11</span>
+            <span data-zh="三篇论文被 AAAI 接收，感谢并祝贺所有合作者！🎉" data-en="Three papers accepted by AAAI. Thanks and congratulations to all coauthors! 🎉">三篇论文被 AAAI 接收，感谢并祝贺所有合作者！🎉</span>
+          </li>
+          <li>
+            <span class="date">2025.09</span>
+            <span data-zh="一篇论文被 NeurIPS 接收，感谢并祝贺所有合作者！🎉" data-en="One paper accepted by NeurIPS. Thanks and congratulations to all coauthors! 🎉">一篇论文被 NeurIPS 接收，感谢并祝贺所有合作者！🎉</span>
+          </li>
+          <li>
+            <span class="date">2025.07</span>
+            <span data-zh="发布新的 MOT 数据集 CrowdTrack，论文与代码已公开！🎉" data-en="Released a new MOT dataset CrowdTrack, with paper and code publicly available! 🎉">发布新的 MOT 数据集 CrowdTrack，论文与代码已公开！🎉</span>
+          </li>
+          <li>
+            <span class="date">2025.06</span>
+            <span data-zh="一篇论文被 ICCV 接收，感谢并祝贺所有合作者！🎉" data-en="One paper accepted by ICCV. Thanks and congratulations to all coauthors! 🎉">一篇论文被 ICCV 接收，感谢并祝贺所有合作者！🎉</span>
+          </li>
+          <li>
+            <span class="date">2024.11</span>
+            <span data-zh="一篇论文被 AAAI 接收，感谢并祝贺所有合作者！🎉" data-en="One paper accepted by AAAI. Thanks and congratulations to all coauthors! 🎉">一篇论文被 AAAI 接收，感谢并祝贺所有合作者！🎉</span>
+          </li>
+          <li>
+            <span class="date">2024.06</span>
+            <span data-zh="一篇论文被 ECCV 接收，感谢并祝贺所有合作者！🎉" data-en="One paper accepted by ECCV. Thanks and congratulations to all coauthors! 🎉">一篇论文被 ECCV 接收，感谢并祝贺所有合作者！🎉</span>
+          </li>
+          <li>
+            <span class="date">2023.07</span>
+            <span data-zh="一篇论文被 ACM MM 接收，感谢并祝贺所有合作者！🎉" data-en="One paper accepted by ACM MM. Thanks and congratulations to all coauthors! 🎉">一篇论文被 ACM MM 接收，感谢并祝贺所有合作者！🎉</span>
+          </li>
         </ul>
       </section>
 
       <!-- 发表论文 -->
       <section id="publications" class="section">
-        <h2>发表论文</h2>
+        <h2 class="section-title" data-zh="📚 发表论文" data-en="📚 Publications">📚 发表论文</h2>
 
         <div class="publication">
-          <img src="assets/pub1.svg" alt="论文配图">
+          <img src="photos/omnipt.png" alt="论文配图">
           <div class="pub-info">
-            <h3>论文标题示例：An Efficient Method for XXX</h3>
-            <p class="pub-authors"><strong>你的名字</strong>, 合作者1, 合作者2, 导师</p>
-            <p class="pub-venue">CVPR 2025</p>
+            <h3>OmniPT: Unleashing the Potential of Large Vision Language Models for Pedestrian Tracking and Understanding</h3>
+            <p class="pub-authors"><strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Mengyang Zhao, Ke Niu, Kaixin Peng, Bin Li</p>
+            <p class="pub-venue">AAAI 2026</p>
             <div class="pub-links">
-              <a href="#" target="_blank">Paper</a>
-              <a href="#" target="_blank">Code</a>
-              <a href="#" target="_blank">Project</a>
+              <a href="https://arxiv.org/abs/2511.17053" target="_blank">Paper</a>
             </div>
           </div>
         </div>
 
         <div class="publication">
-          <img src="assets/pub2.svg" alt="论文配图">
+          <img src="photos/memlgrpo.png" alt="论文配图">
           <div class="pub-info">
-            <h3>论文标题示例：Learning to XXX with XXX</h3>
-            <p class="pub-authors"><strong>你的名字</strong>, 合作者1, 合作者2</p>
-            <p class="pub-venue">NeurIPS 2024</p>
+            <h3>Meml-grpo: Heterogeneous Multi-expert Mutual Learning for RLVR Advancement</h3>
+            <p class="pub-authors">Weitao Jia, Jinghui Lu, Haiyang Yu, Siqi Wang, Guozhi Tang, An-Lan Wang, Weijie Yin, Dingkang Yang, Yuxiang Nie, Bin Shan, Hao Feng, Irene Li, Kun Yang, Han Wang, Jingqun Tang, <strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Changhong Jin, Chao Feng, Xiaohui Lv, Can Huang</p>
+            <p class="pub-venue">arXiv 2025</p>
             <div class="pub-links">
-              <a href="#" target="_blank">Paper</a>
-              <a href="#" target="_blank">Code</a>
+              <a href="https://arxiv.org/abs/2508.09670" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="photos/crowdtrack.png" alt="论文配图">
+          <div class="pub-info">
+            <h3>CrowdTrack: A Benchmark for Difficult Multiple Pedestrian Tracking in Real Scenarios</h3>
+            <p class="pub-authors"><strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Yuwen Chen, Zhuofan Chen, Mengyang Zhao, Bin Li, Xiangyang Xue</p>
+            <p class="pub-venue">arXiv 2025</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2507.02479" target="_blank">Paper</a>
+              <a href="https://github.com/loseevaya/CrowdTrack" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="photos/Prolonged.png" alt="论文配图">
+          <div class="pub-info">
+            <h3>Prolonged Reasoning Is Not All You Need: Certainty-based Adaptive Routing for Efficient LLM/MLLM Reasoning</h3>
+            <p class="pub-authors">Jinghui Lu, Haiyang Yu, Siliang Xu, Shiwei Ran, Guozhi Tang, Siqi Wang, Bin Shan, <strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Hao Feng, Jingqun Tang, Han Wang, Can Huang</p>
+            <p class="pub-venue">arXiv 2025</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2505.15154" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="photos/eve.png" alt="论文配图">
+          <div class="pub-info">
+            <h3>Eve: Towards End-to-End Video Subtitle Extraction with Vision-Language Models</h3>
+            <p class="pub-authors">Haiyang Yu, Mengyang Zhao, Jinghui Lu, Ke Niu, Yanjie Wang, Weijie Yin, Weitao Jia, <strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Yang Liu, Jun Liu, Hong Chen</p>
+            <p class="pub-venue">arXiv 2025</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2503.04058" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="photos/foundation.png" alt="论文配图">
+          <div class="pub-info">
+            <h3>Foundation Model Driven Appearance Extraction for Robust Multiple Object Tracking</h3>
+            <p class="pub-authors"><strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Haiyang Yu, Ke Niu, Bin Li, Xiangyang Xue</p>
+            <p class="pub-venue">AAAI 2025</p>
+            <div class="pub-links">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32311" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="photos/eaformer.png" alt="论文配图">
+          <div class="pub-info">
+            <h3>Eaformer: Scene Text Segmentation with Edge-aware Transformers</h3>
+            <p class="pub-authors">Haiyang Yu, <strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Bin Li, Xiangyang Xue</p>
+            <p class="pub-venue">ECCV 2024</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2407.17020" target="_blank">Paper</a>
+                <a href="https://github.com/hyangyu/EAFormer" target="_blank">Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img src="photos/denoising.png" alt="论文配图">
+          <div class="pub-info">
+            <h3>Denoising-MOT: Towards Multiple Object Tracking with Severe Occlusions</h3>
+            <p class="pub-authors"><strong data-zh="傅腾" data-en="Teng Fu">傅腾</strong>, Xiaocong Wang, Haiyang Yu, Ke Niu, Bin Li, Xiangyang Xue</p>
+            <p class="pub-venue">ACM MM 2023</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2309.04682" target="_blank">Paper</a>
             </div>
           </div>
         </div>
@@ -108,42 +267,75 @@
 
       <!-- 教育经历 -->
       <section id="education" class="section">
-        <h2>教育经历</h2>
-        <div class="timeline-item">
-          <span class="time">2024 - 至今</span>
-          <div>
-            <h3>某某大学</h3>
-            <p>计算机科学与技术 · 硕士/博士</p>
+        <h2 class="section-title" data-zh="🎓 教育经历" data-en="🎓 Education">🎓 教育经历</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="time" data-zh="2021 - 2026" data-en="2021 - 2026">2021 - 2026</span>
+            <div class="timeline-body">
+              <h3 data-zh="复旦大学" data-en="Fudan University">复旦大学</h3>
+              <p data-zh="计算机科学 · 博士" data-en="Computer Science · Ph.D.">计算机科学 · 博士</p>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item">
-          <span class="time">2020 - 2024</span>
-          <div>
-            <h3>某某大学</h3>
-            <p>计算机科学与技术 · 学士</p>
+          <div class="timeline-item">
+            <span class="time" data-zh="2017 - 2021" data-en="2017 - 2021">2017 - 2021</span>
+            <div class="timeline-body">
+              <h3 data-zh="山东大学" data-en="Shandong University">山东大学</h3>
+              <p data-zh="人工智能 · 学士" data-en="Artificial Intelligence · B.S.">人工智能 · 学士</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- 工作经历 -->
       <section id="experience" class="section">
-        <h2>工作经历</h2>
-        <div class="timeline-item">
-          <span class="time">2023 - 2024</span>
-          <div>
-            <h3>某某公司 / 实验室</h3>
-            <p>研究实习生 / 开发工程师</p>
+        <h2 class="section-title" data-zh="💼 工作经历" data-en="💼 Experience">💼 工作经历</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="time" data-zh="2026.06 起" data-en="From Jun. 2026">2026.06 起</span>
+            <div class="timeline-body">
+              <h3 data-zh="蚂蚁集团 · AI 算法工程师（即将入职）" data-en="Ant Group · AI Algorithm Engineer (Incoming)">蚂蚁集团 · AI 算法工程师（即将入职）</h3>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="time" data-zh="2026.02 - 2026.05" data-en="2026.02 - 2026.05">2026.02 - 2026.05</span>
+            <div class="timeline-body">
+              <h3 data-zh="蚂蚁集团 · 研究实习生" data-en="Ant Group · Research Intern">蚂蚁集团 · 研究实习生</h3>
+              <p data-zh="负责多源异构大模型相关研究。" data-en="Worked on multi-source heterogeneous large models.">负责多源异构大模型相关研究。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="time" data-zh="2025.01 - 2026.01" data-en="2025.01 - 2026.01">2025.01 - 2026.01</span>
+            <div class="timeline-body">
+              <h3 data-zh="字节跳动 · 研究实习生" data-en="ByteDance · Research Intern">字节跳动 · 研究实习生</h3>
+              <p data-zh="从事 diffusion language model 相关研究，产出 3 篇论文（见发表论文）。" data-en="Worked on diffusion language models; produced 3 papers (see Publications).">从事 diffusion language model 相关研究，产出 3 篇论文（见发表论文）。</p>
+            </div>
           </div>
         </div>
       </section>
 
+        <!-- 学术服务 -->
+        <section id="services" class="section">
+          <h2 class="section-title" data-zh="🛠️ 学术服务" data-en="🛠️ Services">🛠️ 学术服务</h2>
+          <div class="services">
+            <div class="service-item">
+              <h3 data-zh="会议审稿人" data-en="Conference Reviewer">会议审稿人</h3>
+              <p>CVPR, ECCV, ICCV, NeurIPS, ICLR, ACL, AAAI, ACM MM</p>
+            </div>
+            <div class="service-item">
+              <h3 data-zh="期刊审稿人" data-en="Journal Reviewer">期刊审稿人</h3>
+              <p>ToMM, TIP, TMM</p>
+            </div>
+          </div>
+        </section>
+
       <!-- 获奖荣誉 -->
       <section id="honors" class="section">
-        <h2>获奖荣誉</h2>
-        <ul>
-          <li>国家奖学金，2024</li>
-          <li>优秀毕业生，2024</li>
-          <li>某某竞赛一等奖，2023</li>
+        <h2 class="section-title" data-zh="🏆 获奖荣誉" data-en="🏆 Honors">🏆 获奖荣誉</h2>
+        <ul class="honor-list">
+          <li data-zh="复旦大学优秀博士毕业生" data-en="Outstanding Ph.D. Graduate, Fudan University">复旦大学优秀博士毕业生</li>
+          <li data-zh="山东省优秀本科毕业生" data-en="Outstanding Undergraduate Graduate, Shandong Province">山东省优秀本科毕业生</li>
+          <li data-zh="山东省软件设计大赛一等奖" data-en="First Prize, Shandong Software Design Competition">山东省软件设计大赛一等奖</li>
+          <li data-zh="青岛博物馆优秀志愿者" data-en="Outstanding Volunteer, Qingdao Museum">青岛博物馆优秀志愿者</li>
         </ul>
       </section>
 
