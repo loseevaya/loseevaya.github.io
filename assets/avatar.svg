@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <rect width="280" height="280" fill="#4a4a52"/>
+  <circle cx="140" cy="105" r="48" fill="#9a9aa2"/>
+  <path d="M140 165c-55 0-92 35-92 78v12c0 8 6 15 15 15h154c9 0 15-7 15-15v-12c0-43-37-78-92-78z" fill="#9a9aa2"/>
+  <text x="140" y="270" text-anchor="middle" font-family="Arial" font-size="12" fill="#bbb">avatar placeholder</text>
+</svg>

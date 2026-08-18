@@ -1,0 +1,10 @@
+这里是你的简历占位文件。
+请将你的真实简历（PDF 格式）放到 assets 目录下，例如 assets/CV.pdf，
+然后把 index.html 中对应的链接从 assets/CV.txt 改为 assets/CV.pdf。
+
+建议简历包含：
+- 教育经历
+- 科研/工作经历
+- 发表论文
+- 获奖荣誉
+- 技能
